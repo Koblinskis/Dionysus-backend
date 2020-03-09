@@ -2,7 +2,7 @@ const UData = require('../model/UData')
 
 exports.uData_list_post = async function(req, res) {
   const uData = new UData({
-    ...req.body,
+    listItems: req.body,
     owner: req.user._id
   })
 
